@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  ul
+    for message in messages
+      div.box
+        div 
+          p= message.user
+          p= message.text
+          p= message.added 
+  button
+    a(href='new') Add a message

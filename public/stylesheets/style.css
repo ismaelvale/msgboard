@@ -1,0 +1,23 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: black;
+  align-content: center;
+  text-decoration: none;
+}
+
+ul {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  border: 10px double black;
+}
+
+div {
+  display: block;
+  border-bottom: 5px double black;
+}

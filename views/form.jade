@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h2= 'New Message'
+    form(method= 'POST' action= '/new')
+        input(
+            type="text"
+            name= "name"
+            placeholder= "What's your name?"
+            )
+        input(
+            type="text"
+            name= "msgtext"
+            placeholder= "Thoughts?"
+            )
+        button(type= "submit")= "Submit"
