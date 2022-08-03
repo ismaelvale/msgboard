@@ -1,11 +1,9 @@
-extends layout
-
-block content
-meta(html-equiv="refresh" content="1")
-  ul
-    for message in messages
-      div.box
-        div 
-          p= message.user
-          p= message.text
-          p= message.added 
+html
+  meta(html-equiv="refresh" content="1")
+    ul
+      for message in messages
+        div.box
+          div 
+            p= message.user
+            p= message.text
+            p= message.added 
