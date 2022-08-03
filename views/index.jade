@@ -3,6 +3,7 @@ extends layout
 block content
   h1= title
   iframe(src="/messages" title="messages" width="100%" height="500")
+  meta(html-equiv="refresh" content="1")
     include messages.jade 
   h2= 'Add a New Message'
     form(method= 'POST' action= '/new')
