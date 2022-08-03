@@ -16,20 +16,23 @@ const messages = [
 ];
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: "Mini Messageboard", messages: messages });
+  res.render('index', { title: "Mini Messageboard", messages: messages })
 });
-router.get('/new', function(req, res, next) {
+//Form redirect removed as form submission was added to index
+/*router.get('/new', function(req, res, next) {
   res.render('form');
-});
+});*/ 
 router.post('/new', function(req, res, next) {
-    const message = {
-        text: req.body.msgtext,
-        user: req.body.name,
-        added: new Date().toString()
-    }
-
-    messages.unshift({text: message.text, user: message.user, added: message.added});
-    res.redirect('/');
+  const message = {
+    text: req.body.msgtext,
+    user: req.body.name,
+    added: new Date().toString()
+  };
+  messages.unshift({text: message.text, user: message.user, added: message.added});
+  res.redirect('/');
+});
+router.get('/messages', function(req, res, next) {
+  res.render('messages', {messages:messages})
 });
 
 module.exports = router;
